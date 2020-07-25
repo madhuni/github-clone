@@ -1,0 +1,5 @@
+@import '../../styles/theme';
+
+.user-handle {
+  color: map-get($palette-grey, 'l3');
+}
