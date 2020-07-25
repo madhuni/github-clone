@@ -1,0 +1,5 @@
+@import '../../styles/theme';
+
+.user-name {
+  color: map-get($palette-primary, 'm0');
+}
