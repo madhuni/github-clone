@@ -1,0 +1,30 @@
+@import '../../styles/theme';
+@import '../../styles/variables';
+
+.user-meta-data {
+  &__link,
+  &__text {
+    display: flex;
+    align-items: center;
+
+    & > *:not(:last-child) {
+      margin-right: $size-4;
+    }
+
+    svg {
+      width: $size-16;
+      height: $size-16;
+      color: map-get($palette-grey, 'l3');
+    }
+  }
+
+  &__link {
+    & > * {
+      transition: color 0.3s;
+    }
+
+    &:hover > * {
+      color: map-get($palette-primary, 'm0');
+    }
+  }
+}
