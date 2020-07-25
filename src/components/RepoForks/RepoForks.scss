@@ -1,0 +1,16 @@
+@import '../../styles/theme';
+@import '../../styles/variables';
+
+.repo-forks {
+  transition: color 0.2s;
+
+  svg {
+    width: $size-16;
+    height: $size-16;
+    margin-right: $size-4;
+  }
+
+  &:hover {
+    color: map-get($palette-primary, 'm0');
+  }
+}
