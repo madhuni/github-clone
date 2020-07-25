@@ -1,0 +1,31 @@
+@import '../../styles/theme';
+@import '../../styles/variables';
+
+$background-color: #fafbfc;
+$background-hover-color: #f3f4f6;
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $size-8 $size-16;
+  border: $size-1 solid map-get($palette-grey, 'l4');
+  border-radius: $size-7;
+  background-color: $background-color;
+  transition: background-color 0.3s;
+  outline: none;
+
+  svg {
+    width: $size-20;
+    height: $size-20;
+  }
+
+  & > *:not(:last-child) {
+    margin-right: $size-4;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $background-hover-color;
+  }
+}
