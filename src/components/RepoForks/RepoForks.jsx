@@ -7,7 +7,7 @@ export default function RepoForks({ icon, count, url, classNames }) {
   return (
     <a className={`repo-forks ${classNames}`} href={url}>
       {icon}
-      <caption className="t-caption">{count}</caption>
+      <span className="t-caption">{count}</span>
     </a>
   );
 }
