@@ -1,0 +1,25 @@
+@import '../../styles/theme';
+@import '../../styles/variables';
+
+.repo-details {
+  & > *:not(:last-child) {
+    margin-bottom: $size-8;
+  }
+
+  .repo {
+    &__name {
+      color: map-get($palette-primary, 'm0');
+    }
+
+    &__url {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &__name,
+    &__description {
+      padding-right: $size-16;
+    }
+  }
+}
