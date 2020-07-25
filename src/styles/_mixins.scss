@@ -1,0 +1,5 @@
+@mixin large-device {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

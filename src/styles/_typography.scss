@@ -1,0 +1,71 @@
+@import './variables';
+
+// HEADING TEXT
+.t-h1 {
+  font-size: $font-size-h1;
+  font-weight: $font-light;
+  letter-spacing: -0.15rem;
+}
+.t-h2 {
+  font-size: $font-size-h2;
+  font-weight: $font-light;
+  letter-spacing: -0.05rem;
+}
+.t-h3 {
+  font-size: $font-size-h3;
+  font-weight: $font-regular;
+  letter-spacing: 0;
+}
+.t-h4 {
+  font-size: $font-size-h4;
+  font-weight: $font-regular;
+  letter-spacing: 0.025rem;
+}
+.t-h5 {
+  font-size: $font-size-h5;
+  font-weight: $font-regular;
+  letter-spacing: 0;
+}
+.t-h6 {
+  font-size: $font-size-h6;
+  font-weight: $font-medium;
+  letter-spacing: 0.015rem;
+}
+
+// SUBTITLE TEXT
+.t-subtitle1 {
+  font-size: $font-size-subtitle1;
+  font-weight: $font-regular;
+  letter-spacing: 0.015rem;
+}
+.t-subtitle2 {
+  font-size: $font-size-subtitle2;
+  font-weight: $font-medium;
+  letter-spacing: 0.01rem;
+}
+
+// BODY TEXT
+.t-body1 {
+  font-size: $font-size-body1;
+  font-weight: $font-regular;
+  letter-spacing: 0.05rem;
+}
+.t-body2 {
+  font-size: $font-size-body2;
+  font-weight: $font-regular;
+  letter-spacing: 0.025rem;
+}
+
+// BUTTON TEXT
+.t-button {
+  font-size: $font-size-button;
+  font-weight: $font-medium;
+  letter-spacing: 0.125rem;
+}
+
+// CAPTION TEXT
+.t-caption {
+  font-size: $font-size-caption;
+  font-weight: $font-regular;
+  letter-spacing: 0.04rem;
+}

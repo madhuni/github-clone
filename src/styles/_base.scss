@@ -1,0 +1,33 @@
+@import './theme';
+@import './variables';
+@import './mixins';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: $font-size-body2;
+  font-weight: $font-regular;
+  color: map-get($palette-grey, 'm0');
+  background-color: #f4f4f4;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: $width-container;
+  margin: 0 auto;
+  padding: 0 $size-16;
+
+  @include large-device {
+    padding: 0 $size-24;
+  }
+}
