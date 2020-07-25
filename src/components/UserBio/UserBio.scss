@@ -1,0 +1,5 @@
+@import '../../styles/theme';
+
+.user-profile-bio {
+  color: map-get($palette-primary, 'm0');
+}
