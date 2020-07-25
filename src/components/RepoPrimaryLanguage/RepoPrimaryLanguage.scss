@@ -1,0 +1,15 @@
+@import '../../styles/theme';
+@import '../../styles/variables';
+
+.repo-primary-language {
+  display: flex;
+  align-items: center;
+
+  &__color {
+    display: inline-block;
+    width: $size-12;
+    height: $size-12;
+    border-radius: 50%;
+    margin-right: $size-4;
+  }
+}
