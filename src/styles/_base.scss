@@ -11,7 +11,7 @@ body {
   font-size: $font-size-body2;
   font-weight: $font-regular;
   color: map-get($palette-grey, 'm0');
-  background-color: #f4f4f4;
+  background-color: map-get($palette-grey, 'l7');
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
