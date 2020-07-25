@@ -1,0 +1,13 @@
+@import '../../styles/theme';
+@import '../../styles/variables';
+
+.repo-license {
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: $size-16;
+    height: $size-16;
+    margin-right: $size-4;
+  }
+}
