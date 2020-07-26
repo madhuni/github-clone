@@ -1,4 +1,4 @@
-// eslint-disable-file no-noninteractive-element-interactions
+/* eslint jsx-a11y/no-noninteractive-element-interactions: 0 */
 import React, { useState } from 'react';
 import { GoCheck } from 'react-icons/go';
 import PropTypes from 'prop-types';
