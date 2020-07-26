@@ -1,0 +1,8 @@
+@import '../../styles/theme';
+@import '../../styles/variables';
+
+.search-input {
+  padding: $size-8 $size-16;
+  border: $size-1 solid map-get($palette-grey, 'l4');
+  border-radius: $size-7;
+}
