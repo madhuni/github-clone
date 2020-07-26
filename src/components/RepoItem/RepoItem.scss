@@ -1,0 +1,32 @@
+@import '../../styles/theme';
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.repo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $size-24 0;
+  border-top: $size-1 solid map-get($palette-grey, 'l5');
+  border-bottom: $size-1 solid map-get($palette-grey, 'l5');
+
+  &__details {
+    padding-right: $size-8;
+  }
+
+  &__meta-data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: $size-16;
+
+    & > *:not(:last-child) {
+      margin-right: $size-16;
+    }
+
+    & > * {
+      margin-bottom: $size-8;
+    }
+  }
+}
