@@ -4,13 +4,28 @@
 .user-profile-widget {
   width: 100%;
   padding: $size-16;
+  position: relative;
 
   @include large-device {
     width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+  }
+
+  &__container {
+    @include large-device {
+      position: sticky;
+      top: $size-16;
+    }
+  }
+
+  .main {
+    width: 100%;
+
+    @include large-device {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
   }
 
   .user-profile {
