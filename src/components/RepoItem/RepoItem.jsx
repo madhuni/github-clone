@@ -18,10 +18,13 @@ export default function RepoItem({
   htmlUrl,
   description,
   primaryLanguage,
+  languageColor,
   forksCount,
   licenseName,
   starsCount,
   updatedAt,
+  forksUrl,
+  starsUrl,
 }) {
   return (
     <div className="repo-item">
@@ -30,17 +33,27 @@ export default function RepoItem({
         <RepoDetails name={name} url={htmlUrl} description={description} />
         {/* Meta data about the repository goes here */}
         <div className="repo-item__meta-data">
-          <RepoPrimaryLanguage
-            languageColor="#f1e05a"
-            language={primaryLanguage}
-          />
+          {primaryLanguage && (
+            <RepoPrimaryLanguage
+              languageColor={languageColor}
+              language={primaryLanguage}
+            />
+          )}
           {starsCount > 0 && (
-            <RepoStars icon={<MdStarBorder />} count={starsCount} url="#" />
+            <RepoStars
+              icon={<MdStarBorder />}
+              count={starsCount}
+              url={starsUrl}
+            />
           )}
           {forksCount > 0 && (
-            <RepoForks icon={<GoRepoForked />} count={forksCount} url="#" />
+            <RepoForks
+              icon={<GoRepoForked />}
+              count={forksCount}
+              url={forksUrl}
+            />
           )}
-          {licenseName && <RepoLicense icon={<GoLaw />} name="MIT License" />}
+          {licenseName && <RepoLicense icon={<GoLaw />} name={licenseName} />}
           <RepoLastUpdate lastUpdateDateString={updatedAt} />
         </div>
       </section>
@@ -58,16 +71,23 @@ RepoItem.propTypes = {
   name: PropTypes.string.isRequired,
   htmlUrl: PropTypes.string.isRequired,
   description: PropTypes.string,
-  primaryLanguage: PropTypes.string.isRequired,
+  primaryLanguage: PropTypes.string,
+  languageColor: PropTypes.string,
   forksCount: PropTypes.number,
   licenseName: PropTypes.string,
   starsCount: PropTypes.number,
   updatedAt: PropTypes.string.isRequired,
+  forksUrl: PropTypes.string,
+  starsUrl: PropTypes.string,
 };
 
 RepoItem.defaultProps = {
   description: '',
+  primaryLanguage: undefined,
+  languageColor: undefined,
   forksCount: 0,
   licenseName: undefined,
   starsCount: 0,
+  forksUrl: '#',
+  starsUrl: '#',
 };
