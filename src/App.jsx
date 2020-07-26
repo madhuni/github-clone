@@ -1,10 +1,15 @@
 import React from 'react';
+
+import UserRepositoriesWidget from './widgets/UserRepositories/UserRepositories.widget';
+import UserProfileWidget from './widgets/UserProfile/UserProfile.widget';
+
 import './App.scss';
 
 function App() {
   return (
-    <main className="app">
-      <p className="t-body1">App is running!</p>
+    <main className="app container">
+      <UserProfileWidget />
+      <UserRepositoriesWidget />
     </main>
   );
 }

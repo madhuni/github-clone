@@ -1,0 +1,12 @@
+@import './styles/mixins';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  @include large-device {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
