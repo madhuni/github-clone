@@ -1,12 +1,9 @@
 import { combineReducers } from 'redux';
 
-// Importing the baseReducer. Later on we can create multiple reducers and those can
-// be combined together to creat the `appStore` for the overall application.
-
-import baseReducer from './base.reducer';
+import repositoriesReducer from './repositories.reducer';
 
 const appStore = combineReducers({
-  base: baseReducer,
+  repos: repositoriesReducer,
 });
 
 export default appStore;

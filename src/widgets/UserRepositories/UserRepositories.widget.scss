@@ -1,0 +1,38 @@
+@import '../../styles/theme';
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.repos-widget {
+  width: 100%;
+  padding: $size-8 $size-16;
+
+  @include large-device {
+    width: 70%;
+  }
+
+  & > *:first-child {
+    border-top: $size-1 solid map-get($palette-grey, 'l5');
+  }
+
+  & > * {
+    border-bottom: $size-1 solid map-get($palette-grey, 'l5');
+  }
+
+  .loading,
+  .no-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50rem;
+  }
+
+  .no-content {
+    flex-direction: column;
+    padding: $size-32;
+    img {
+      width: 20rem;
+      margin-bottom: $size-16;
+    }
+  }
+}
