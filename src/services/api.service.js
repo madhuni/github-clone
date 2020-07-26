@@ -9,6 +9,9 @@ export async function getUserProfile() {
   const url = baseURL;
   try {
     const response = await fetch(url);
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
     const data = response.json();
     return Promise.resolve(data);
   } catch (error) {
@@ -31,6 +34,9 @@ export async function getRepoDetails() {
   const url = `${baseURL}/repos`;
   try {
     const response = await fetch(url);
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
     const data = response.json();
     return Promise.resolve(data);
   } catch (error) {
