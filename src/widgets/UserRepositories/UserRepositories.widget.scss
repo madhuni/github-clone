@@ -10,12 +10,22 @@
     width: 70%;
   }
 
-  & > *:first-child {
-    border-top: $size-1 solid map-get($palette-grey, 'l5');
+  & > *:not(.header) {
+    border-bottom: $size-1 solid map-get($palette-grey, 'l5');
   }
 
-  & > * {
+  .header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: $size-16 0;
     border-bottom: $size-1 solid map-get($palette-grey, 'l5');
+
+    svg {
+      width: $size-24;
+      height: $size-24;
+      margin-right: $size-8;
+    }
   }
 
   .loading,

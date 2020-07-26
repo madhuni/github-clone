@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { GoRepo } from 'react-icons/go';
 
 import RepoItem from '../../components/RepoItem/RepoItem';
 
@@ -28,6 +29,10 @@ export default function UserRepositoriesWidget() {
 
   return (
     <section className="repos-widget">
+      <header className="header">
+        <GoRepo />
+        <h6 className="t-h6">Repositories - {repos.length}</h6>
+      </header>
       {/* Loading state */}
       {loadingRepos && (
         <p className="loading t-subtitle1">Loading Repositories...</p>
