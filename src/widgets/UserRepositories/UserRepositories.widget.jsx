@@ -5,7 +5,10 @@ import { GoRepo } from 'react-icons/go';
 import RepoItem from '../../components/RepoItem/RepoItem';
 
 import { getRepoDetails } from '../../services/api.service';
-import { setRepos } from '../../store/actions/repositories.action';
+import {
+  setRepos,
+  setFilteredRepos,
+} from '../../store/actions/repositories.action';
 import {
   getLanguageColor,
   getFormattedDate,
@@ -13,16 +16,18 @@ import {
 
 import NoContent from '../../assets/images/no-content.svg';
 import './UserRepositories.widget.scss';
+import RepositoriesActionsWidget from '../RepositoriesActions/RepositoriesActions.widget';
 
 export default function UserRepositoriesWidget() {
   const [loadingRepos, setLoadingRepos] = useState(false);
-  const repos = useSelector((state) => state.repos);
+  const { filteredRepos } = useSelector((state) => state.repos);
   const dispatch = useDispatch();
 
   useEffect(() => {
     setLoadingRepos(true);
     getRepoDetails().then((data) => {
       dispatch(setRepos(data));
+      dispatch(setFilteredRepos(data));
       setLoadingRepos(false);
     });
   }, []);
@@ -31,22 +36,23 @@ export default function UserRepositoriesWidget() {
     <section className="repos-widget">
       <header className="header">
         <GoRepo />
-        <h6 className="t-h6">Repositories - {repos.length}</h6>
+        <h6 className="t-h6">Repositories - {filteredRepos.length}</h6>
       </header>
+      <RepositoriesActionsWidget />
       {/* Loading state */}
       {loadingRepos && (
         <p className="loading t-subtitle1">Loading Repositories...</p>
       )}
       {/* No content state */}
-      {!repos.length && !loadingRepos && (
+      {!filteredRepos.length && !loadingRepos && (
         <div className="no-content">
           <img src={NoContent} alt="No content" />
           <p className="t-subtitle1">No Repositories Found!</p>
         </div>
       )}
       {/* Repositories list view */}
-      {repos.length > 0 &&
-        repos.map(
+      {filteredRepos.length > 0 &&
+        filteredRepos.map(
           ({
             id,
             name,
