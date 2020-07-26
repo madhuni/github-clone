@@ -42,3 +42,20 @@ export const getFormattedDate = (dateString) => {
     monthsShortName[date.getMonth() + 1]
   } ${date.getFullYear()}`;
 };
+
+/**
+ * Debounce higher order function.
+ *
+ * @export
+ * @param {*} callBack - callback function to run
+ * @param {*} time - time in ms for timeout
+ * @returns {function}
+ */
+export function debounce(callBack, time) {
+  let timeout;
+
+  return function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(callBack, time);
+  };
+}

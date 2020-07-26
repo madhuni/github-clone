@@ -1,0 +1,15 @@
+@import '../../styles/variables.scss';
+
+.actions-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: $size-16 0;
+
+  & > *:first-child {
+    flex: 1;
+  }
+
+  & > *:not(:last-child) {
+    margin-right: $size-8;
+  }
+}
