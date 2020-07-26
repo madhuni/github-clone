@@ -1,0 +1,37 @@
+@import '../../styles/theme';
+@import '../../styles/variables';
+
+.custom-select {
+  position: relative;
+
+  .options-list {
+    width: 100%;
+    position: absolute;
+    top: $size-40;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: map-get($palette-grey, 'l7');
+    border: $size-1 solid map-get($palette-grey, 'l5');
+    z-index: 1;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      padding: $size-4 $size-8;
+      transition: background-color 0.3s;
+
+      &:not(:last-child) {
+        border-bottom: $size-1 solid map-get($palette-grey, 'l6');
+      }
+
+      &--selected,
+      &:hover:not(:first-child) {
+        background-color: #f6f8fa;
+      }
+
+      &:hover:not(:first-child) {
+        cursor: pointer;
+      }
+    }
+  }
+}
