@@ -17,3 +17,7 @@ npm install
 # once the dependencies are installed then run the below command
 npm run dev
 ```
+
+> Note:
+> The API calls may fail due to the CORS issue. Please use the below link to open the Chrome with disabled security to see the actual implementation.
+> [https://alfilatov.com/posts/run-chrome-without-cors/](https://alfilatov.com/posts/run-chrome-without-cors/)
